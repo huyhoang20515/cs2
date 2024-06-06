@@ -1,1 +1,84 @@
-wdkjkwej
+using System;
+
+class bai_7
+{
+    static void Main()
+    {
+        Console.Write("Nhap vao so nguyen khong dau thu nhat: ");
+        uint so1 = uint.Parse(Console.ReadLine());
+
+        Console.Write("Nhap vao so nguyen khong dau thu hai: ");
+        uint so2 = uint.Parse(Console.ReadLine());
+
+        uint tong = so1 + so2;
+
+        Console.WriteLine("Tong cua hai so la: " + tong);
+        //phan b
+
+        Console.Write("Chieu dai cua hinh chu nhat: ");
+        int chieudai = int.Parse(Console.ReadLine());
+
+        Console.WriteLine("Chieu rong cua hinh chu nhat: ");
+        int chieurong = int.Parse(Console.ReadLine());
+
+        int dientich = chieudai * chieurong;
+        int chuvi = 2 * (chieudai + chieurong);
+        Console.WriteLine("Dien tich cua hinh chu nhat la:" + dientich);
+        Console.WriteLine("Chu vi cua hinh chu nhat la: " + chuvi);
+
+        //phan c
+    
+
+        Console.WriteLine("Nhap vao so nguyen khong dau 4 byte: ");
+        int so = int.Parse(Console.ReadLine());
+        if(so % 2 == 0)
+        {
+            Console.WriteLine("So" + so + "la so chan.");
+
+        }
+        else
+        {
+            Console.WriteLine("So" + so + "la so le.");
+        }
+        //phan d
+        Console.Write("Nhap vao so nguyen co dau 1 byte thu nhat: ");
+        string input1 = Console.ReadLine();
+
+        Console.Write("Nhap vao so nguyen co dau 1 byte thu hai: ");
+        string input2 = Console.ReadLine();
+
+        bool isValid1 = sbyte.TryParse(input1, out sbyte so1);
+        bool isValid2 = sbyte.TryParse(input2, out sbyte so2);
+
+        if (isValid1 && isValid2)
+        {
+            int tong = int(so1+so2);
+            Console.WriteLine("Tong cua hai so la: " + tong);
+        }
+        else
+        {
+            Console.WriteLine("Vui long nhap cac so nguyen co dau hop le.");
+        }
+        //phan e
+        Console.Write("Nhap vao mot so nguyen khong dau 4 byte: ");
+        string input = Console.ReadLine();
+
+        if (int.TryParse(input, out int n))
+        {
+            long tong = 0;
+            for (int i = 1; i <= n; i++)
+            {
+                tong += i;
+            }
+
+            Console.WriteLine("Tong cua cac so tu 1 den " + n + " la: " + tong);
+        }
+        else
+        {
+            Console.WriteLine("Vui long nhap mot so nguyen khong dau hop le.");
+        }
+
+
+    }
+}
+
